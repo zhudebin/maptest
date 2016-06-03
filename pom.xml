@@ -34,6 +34,22 @@ questions.
 
     <name>Auto-generated JMH benchmark</name>
 
+    <repositories>
+        <repository>
+            <id>eurlanda-repo</id>
+            <!-- This should be at top, it makes maven try the central repo first and
+				then others and hence faster dep resolution -->
+            <name>Maven Repository</name>
+            <url>http://192.168.137.11:8081/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
